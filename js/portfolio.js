@@ -22,18 +22,20 @@ $(function () {
     },
   );
 
-  /*  $(".question li").hover(
-    function () {
-      $(this).children(".answer").show();
-      $(this).siblings().children(".answer").hide();
-    },
-    function () {
-      $(this).children(".answer").hide();
-      $(this).siblings().children(".answer").hide();
-    },
-  ); */
-
   $(".question li").hover(function () {
+    $(this).children("h4").stop().fadeToggle(400);
+
     $(this).children(".answer").stop().slideToggle(400);
   });
+
+  $(".text-1 h2,.text-4 h2").hover(
+    function () {
+      $(this).stop().fadeTo(400, 0.1);
+      $(this).siblings().stop().fadeIn();
+    },
+    function () {
+      $(this).stop().fadeTo(400, 1);
+      $(this).siblings().stop().fadeOut();
+    },
+  );
 });

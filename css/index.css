@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
 }
-/* change */
 html {
   height: 100%;
   background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
@@ -59,9 +58,15 @@ a {
   }
 }
 
+@media screen and (min-width: 1800px) {
+  .main_container {
+    width: 1750px;
+  }
+}
+
 .main_container {
   display: flex;
-  height: 750px;
+  height: 800px;
   margin: 110px auto;
   border: 1px solid #333;
   overflow: hidden;
@@ -217,7 +222,7 @@ nav {
 }
 .content {
   position: absolute;
-  top: 48%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 500px;
@@ -248,13 +253,15 @@ nav {
   opacity: 0.3;
 }
 
-.text-1 h3,
-.text-2 h3,
-.text-3 h3,
-.text-4 h3 {
+.text-1 h2,
+.text-2 h2,
+.text-3 h2,
+.text-4 h2 {
   color: #fff;
   padding-left: 10px;
+  font-size: 23px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.557);
+  cursor: pointer;
 }
 .text-1::after {
   top: 25px;
@@ -291,12 +298,33 @@ nav {
 .text-3 ul li {
   width: 380px;
   height: 30px;
-  margin-top: 5px;
+  margin-top: 10px;
+  padding-left: 30px;
   line-height: 45px;
   color: #fff;
-  border-bottom: 1px solid #f4f1f1;
   cursor: pointer;
   font-size: 15px;
+}
+
+.text-1 p {
+  display: none;
+  width: 450px;
+  height: 450px;
+  line-height: 2;
+  margin-top: 135px;
+  padding: 10px 27px;
+  color: #fff;
+}
+.text-4 a {
+  display: none;
+  position: absolute;
+  top: 79px;
+  left: 82px;
+  width: 300px;
+  height: 40px;
+  margin-top: 135px;
+  font-size: 20px;
+  color: #fff;
 }
 
 .answer {
@@ -306,8 +334,12 @@ nav {
   display: none;
   width: 450px;
   height: 450px;
-  /*   background-color: rgba(255, 255, 255, 0.145);
-  border-radius: 50%; */
   text-align: center;
-  padding-top: 45px;
+  padding-top: 30px;
+}
+
+.answer p {
+  line-height: 2;
+  text-align: justify;
+  padding-left: 30px;
 }
