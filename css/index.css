@@ -1,12 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+
 * {
   margin: 0;
   padding: 0;
+  font-family: "Roboto", sans-serif;
 }
 html {
   height: 100%;
   background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+  position: relative;
   overflow: hidden;
 }
+/* mask start */
+#mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 999;
+}
+.mask_box {
+  width: 400px;
+  height: 200px;
+  margin: 300px auto;
+  text-align: center;
+}
+.mask_box h1 {
+  display: inline;
+  font-size: 30px;
+  color: #fff;
+  animation: showup 3s linear;
+  opacity: 0;
+}
+.mask_box p {
+  display: inline;
+  font-size: 30px;
+  color: #fff;
+  animation: showup 3s linear;
+  opacity: 0;
+}
+/* .mask_box animate */
+@keyframes showup {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+/* mask end */
 
 ul {
   list-style: none;
@@ -115,7 +160,7 @@ a {
 .moonlight div.pulse4 {
   animation-delay: 12s;
 }
-
+/* .moonlight animate */
 @keyframes pulse {
   0% {
   }
@@ -150,13 +195,17 @@ a {
 .title {
   position: absolute;
   top: -35px;
-  left: 24px;
+  left: -16px;
   width: 50px;
   height: 50px;
   color: rgb(225, 222, 222);
 }
+.title h1 {
+  font-size: 40px;
+}
 .title h3 {
-  padding-left: 35px;
+  font-size: 25px;
+  padding-left: 54px;
 }
 
 /* point&animate end */
@@ -203,6 +252,7 @@ nav {
   width: 30px;
   padding: 0px 1px;
   font-size: 16px;
+  font-weight: 600;
   color: #fff;
 }
 

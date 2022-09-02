@@ -1,4 +1,6 @@
 $(function () {
+  load();
+
   //1) mouseover the li
   $(".meun ul li ").click(function () {
     //2)get the li index
@@ -38,4 +40,13 @@ $(function () {
       $(this).siblings().stop().fadeOut();
     },
   );
+
+  function load() {
+    setInterval(timer, 3000);
+    function timer() {
+      $(document).ready(function () {
+        $("#mask").fadeOut(1800);
+      });
+    }
+  }
 });
