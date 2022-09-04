@@ -31,7 +31,7 @@ html {
   display: inline;
   font-size: 45px;
   color: #fff;
-  animation: showup 2s linear;
+  animation: showup 3s linear;
   opacity: 0;
 }
 .mask_box p {
@@ -302,17 +302,6 @@ nav {
   background-size: contain;
   opacity: 0.3;
 }
-
-.text-1 h2,
-.text-2 h2,
-.text-3 h2,
-.text-4 h2 {
-  color: #fff;
-  padding-left: 10px;
-  font-size: 23px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.557);
-  cursor: pointer;
-}
 .text-1::after {
   top: 25px;
   left: 0;
@@ -334,6 +323,40 @@ nav {
   background: url(../img/4-4moon.png) no-repeat;
 }
 
+.text-1 h2,
+.text-2 h2,
+.text-3 h2,
+.text-4 h2 {
+  color: #fff;
+  padding-left: 15px;
+  font-size: 26px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.557);
+  cursor: pointer;
+}
+/* .text animation start */
+.content div[class^="text"] h2::before {
+  content: "";
+  position: absolute;
+  top: 14px;
+  left: 8px;
+  width: 5px;
+  height: 5px;
+  margin-left: -9px;
+  background-color: #fff;
+  border-radius: 50%;
+  animation: point 3s linear infinite;
+}
+@keyframes point {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+/* .text animation  end*/
+
 .text-2 ul,
 .text-3 ul {
   position: absolute;
@@ -346,14 +369,14 @@ nav {
 }
 .text-2 ul li,
 .text-3 ul li {
-  width: 380px;
+  width: 450px;
   height: 30px;
   margin-top: 10px;
   padding-left: 30px;
   line-height: 45px;
   color: #fff;
   cursor: pointer;
-  font-size: 15px;
+  font-size: 16px;
 }
 
 .text-1 p {
@@ -373,7 +396,7 @@ nav {
   width: 300px;
   height: 40px;
   margin-top: 135px;
-  font-size: 20px;
+  font-size: 25px;
   color: #fff;
 }
 
@@ -389,7 +412,7 @@ nav {
 }
 
 .answer p {
-  line-height: 2;
+  line-height: 1.5;
   text-align: justify;
   padding-left: 30px;
 }
