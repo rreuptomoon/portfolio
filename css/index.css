@@ -243,6 +243,7 @@ nav {
 .moon_icon {
   width: 60px;
   height: 60px;
+  opacity: 0.1;
 }
 
 .meun li a {
